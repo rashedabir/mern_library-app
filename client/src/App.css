@@ -1,0 +1,327 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap");
+
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+body{
+  background-color: whitesmoke;
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child),
+  .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {
+    float: none;
+  }
+  .topnav.responsive .dropdown-content {
+    position: relative;
+  }
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 3px 3px 19px 0px rgba(50, 50, 50, 0.35);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  max-width: 500px;
+  margin-top: 2em;
+  padding: 2em;
+  border-radius: 10px;
+}
+
+.form button {
+  margin-bottom: 15px;
+}
+.form input {
+  width: 350px;
+}
+
+input[type="text"],
+select,
+textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.error-notice {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: 1px solid #e07c7c;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8d6d6;
+}
+.error-notice button {
+  width: 25px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #df4343;
+  color: #ffffff;
+}
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: auto;
+}
+
+.wellcome-display {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  box-shadow: 9px 7px 12px -7px rgba(0, 0, 0, 0.7);
+  margin: auto;
+  width: 400px;
+  padding: 1rem;
+  margin-top: 15rem;
+  height: 100%;
+  outline: 4px dotted rgba(28, 110, 164, 0.26);
+  outline-offset: 0px;
+  background-color: #f2f2f2;
+}
+
+.home{
+  background-image: url(./Pic/3.jpg);
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  color: #fff;
+}
+
+#title {
+  text-align: center;
+}
+
+#employee {
+  border-collapse: collapse;
+  border: 3px solid #ddd;
+}
+
+#employee td,
+#employee th {
+  border: 1px solid #ddd;
+  padding: 12px;
+}
+
+#employee tr:hover {
+  background-color: #ddd;
+}
+
+#employee th {
+  padding: 10px;
+  text-align: center;
+  background-color: #4caf50;
+  color: white;
+}
+
+.opration {
+  text-align: center;
+}
+
+.opration button {
+  border: none;
+  outline: none;
+  font-size: 11px;
+  font-family: "Quicksand", sans-serif;
+  color: #f44336;
+  padding: 3px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid #f44336;
+  background-color: transparent;
+}
+
+.button:active {
+  border: 1px solid blue;
+}
+
+.author-table{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 1200px;
+}
+
+.modalBackground{
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease-in-out;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100%;
+  height: 118%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+}
+.modalShowing-true{
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.modalInner{
+  background: white;
+  width: 800px;
+  max-width: calc(100%-60px);
+  margin: auto;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.exitButton{
+  background: #555;
+  border-radius: 18px;
+  color: #ccc;
+  border: none;
+  margin-top: 20px;
+}
+
